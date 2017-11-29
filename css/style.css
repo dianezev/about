@@ -1,0 +1,272 @@
+  /************************** get aspect ratio set **************************/
+  .aspect {
+    height: 100%;  /* not working in ang */
+    margin-top: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    
+    /* this drives aspect ratio - note % based on width of container */
+    padding-top: 80%;
+  }
+  .infoCard {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  } 
+
+/*****************  margins etc********************/
+  .cardSelect {
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  .col-12, .col-lg-4, .col-md-6 {
+    margin: auto;
+  }
+
+  /*****************  colors etc ********************/
+  .infoCard {
+    background-color: #474780;
+    text-align: center;
+    font-size: calc(16px + .5vw);
+    line-height: 1.2;
+    padding: 5px;
+  }
+  .aboutStuff {
+    background-color: #475386;
+    height: 600px
+  }
+
+  body {
+/*
+    background: url("../img/wood3.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+*/
+  }
+  body, html {
+/*      height: 100%;*/
+/*      background-color: #243746;*/
+        background-color: rgb(25, 12, 56);
+
+      line-height: 1.8;
+      box-sizing:border-box;
+      overflow: scroll;
+      overflow-x: hidden;
+  }
+  body,h1,h2,h3,h4,h5,h6 {
+/*    font-family: "Poppins", sans-serif;*/
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+
+    color: #dddddd;
+  }
+.jumbotron {
+  background: transparent;
+}
+  .jumbotron h1 {
+/*    font-family: 'Fredericka the Great', cursive;*/
+    font-family: 'Sedgwick Ave', cursive;
+/*    font-family: 'Kaushan Script', cursive;*/
+  }
+
+
+/*
+font-family: 'Permanent Marker', cursive;
+font-family: 'Rock Salt', cursive;
+font-family: 'Sedgwick Ave', cursive;
+font-family: 'Aladin', cursive;
+font-family: 'Over the Rainbow', cursive;
+font-family: 'Julee', cursive;
+*/
+/*
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Questrial', sans-serif;
+    font-family: 'Encode Sans Semi Expanded', sans-serif;
+    font-family: 'Julius Sans One', sans-serif;
+
+    font-family: 'Bubblegum Sans', cursive;
+    font-family: 'Boogaloo', cursive;
+    font-family: 'Fredericka the Great', cursive;
+    font-family: 'Kaushan Script', cursive;
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-family: 'Short Stack', cursive;
+    font-family: 'Wendy One', sans-serif;
+*/
+
+
+  ::-webkit-scrollbar {
+      width: 0px;  /* remove scrollbar space */
+  }
+
+
+
+/********************* Create a Parallax Effect *********************/
+/*.bgimg-2, .bgimg-1, .bgimg-3 {*/
+.bgimg-2, .bgimg-2 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* 1st image (Portfolio) */
+.bgimg-1 {
+    background-attachment: fixed;  
+    background-position: center;
+    background-repeat: repeat;
+    background-size: contain;
+    background-image: url("../images/Fib.png");
+    margin-bottom: -32px;
+}
+/*
+.cover {
+  background-color: white;
+  opacity: .8;
+*/
+/*    background-size: cover;*/
+/*}*/
+/* 2nd image (Logo. Full height) */
+.bgimg-2 {
+    background-image: url('../images/pencils.jpg');
+    height: 100vh;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+    background-image: url("../images/IMG_0806.JPG");
+    min-height: 400px;
+}
+
+
+/*********************************************************
+ *  2. NAVBAR
+ ********************************************************/
+.myMenu a {
+/*  color: #2c5739!important;*/
+  font-size: 120%;
+}
+ul.myMenu {
+  margin: auto;
+  width: 800%;
+  justify-content: flex-end;
+}
+.myMenu li {
+  text-align: center;
+}
+.navbar .myMenu li:hover {
+  font-weight: 800;
+}
+
+/*
+.navbar-collapse  {
+  direction: rtl;
+}
+.navbar .navbar-nav .myMenu {
+display: inline;
+color: rgba(0,0,0,.9);
+}
+.navbar p {
+  padding: 8px;
+  margin-bottom: 0;
+  color: rgba(0,0,0,.5);
+}
+.navbar .myMenu:hover {
+  color: black;
+  font-weight: 800;
+}
+
+*/
+.jumbotron .container {
+  margin-top: 30vh;
+  height: 100vh;
+}
+
+/*********************************************************
+ *  10. MEDIA
+ ********************************************************/
+
+/*
+ * These screen sizes are based on bootstrap.css version 4
+ * xs < 576px
+ * sm >= 576px
+ * md >= 768px
+ * lg >= 992 px
+ * xl >= 1200px
+ */
+
+
+/*xs screen*/
+@media (min-width: 0px) {
+  .navbar {
+    background-color: transparent;
+  }
+  .navbar .myMenu li, .navbar button {
+    background-color: black;
+  }
+  .navbar .myMenu li:hover {
+    background-color: #212121;
+  }
+  .myMenu li {
+    width: 10%;
+  }
+  .jumbotron {
+    padding-left: 8%;
+  }
+  .jumbotron h1 {
+    font-size: 2.5rem;
+  }
+  .jumbotron h4 {
+    font-size: 1.5rem;
+  }  
+}
+
+/*sm screen*/
+@media (min-width: 576px) {
+}
+
+/*md screen*/
+@media (min-width: 768px) {
+  .navbar, .navbar:hover {
+    background-color: rgba(0, 0, 0, .3);
+  }
+  .navbar .myMenu li, .navbar button {
+    background-color: inherit;
+  }
+  .navbar .myMenu li:hover {
+    background-color: rgba(255, 255, 255, .2);
+  }
+  .myMenu li {
+    width: 12%;
+  }
+  .jumbotron h1 {
+    font-size: 2.8rem;
+  }
+  .jumbotron h4 {
+    font-size: 1.8rem;
+  }  
+}
+
+/*lg screen*/
+@media (min-width: 992px) {
+  .myMenu li {
+    width: 10%;
+  }
+  .jumbotron h1 {
+    font-size: 3.8rem;
+  }
+  .jumbotron h4 {
+    font-size: 2.2rem;
+  }  
+}
+
+/*xl screen*/
+@media (min-width: 1200px) {
+
+}
+
+
+
