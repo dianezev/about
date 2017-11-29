@@ -33,8 +33,8 @@
     line-height: 1.2;
     padding: 5px;
   }
-  .aboutStuff {
-    background-color: #475386;
+  .notes {
+    background-color: #545554;
     height: 600px
   }
 
@@ -50,7 +50,7 @@
   body, html {
 /*      height: 100%;*/
 /*      background-color: #243746;*/
-        background-color: rgb(25, 12, 56);
+        background-color: rgb(32, 15, 71);
 
       line-height: 1.8;
       box-sizing:border-box;
@@ -67,12 +67,24 @@
 .jumbotron {
   background: transparent;
 }
-  .jumbotron h1 {
+  .jumbotron h1, .navbar-brand {
 /*    font-family: 'Fredericka the Great', cursive;*/
     font-family: 'Sedgwick Ave', cursive;
 /*    font-family: 'Kaushan Script', cursive;*/
   }
-
+.navbar-brand {
+  font-size: 140%;
+}
+.trans1 {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+}
+.trans2 {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .2);
+}
 
 /*
 font-family: 'Permanent Marker', cursive;
@@ -107,7 +119,7 @@ font-family: 'Julee', cursive;
 
 /********************* Create a Parallax Effect *********************/
 /*.bgimg-2, .bgimg-1, .bgimg-3 {*/
-.bgimg-2, .bgimg-2 {
+.bgimg-2, .bgimg-3 {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -132,12 +144,12 @@ font-family: 'Julee', cursive;
 /* 2nd image (Logo. Full height) */
 .bgimg-2 {
     background-image: url('../images/pencils.jpg');
-    height: 100vh;
+/*    height: 100vh;*/
 }
 
 /* Third image (Contact) */
 .bgimg-3 {
-    background-image: url("../images/IMG_0806.JPG");
+    background-image: url("../images/clouds.jpeg");
     min-height: 400px;
 }
 
@@ -210,6 +222,9 @@ color: rgba(0,0,0,.9);
   .navbar .myMenu li:hover {
     background-color: #212121;
   }
+  .navbar-brand {
+    display: none;
+  }
   .myMenu li {
     width: 10%;
   }
@@ -238,6 +253,9 @@ color: rgba(0,0,0,.9);
   }
   .navbar .myMenu li:hover {
     background-color: rgba(255, 255, 255, .2);
+  }
+  .navbar-brand {
+    display:inherit;
   }
   .myMenu li {
     width: 12%;
