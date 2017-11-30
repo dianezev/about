@@ -15,7 +15,56 @@
     bottom: 0;
     right: 0;
   } 
+.skillCards {
+  padding: 5px!important;
+}
+/*center class from CSS tricks*/
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+/*  transform: translate(-50%, -50%);*/
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+.skillCards .infoCard p{
 
+/*  display: table;*/
+/*
+  vertical-align: middle;
+  justify-content:center;
+*/
+}
+.skillCards .infoCard .special {
+/*
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+*/
+/*  display: table-cell;*/
+/*  vertical-align: middle;*/
+/*  justify-content:center;*/
+/*  height: 100%;*/
+/*
+  align-items: center;
+  justify-content: center;
+*/
+}
+/*
+.skillCards img {
+  
+  width: 70%;
+  position: absolute;
+  margin: auto;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+}
+*/
 /*****************  margins etc********************/
   .cardSelect {
     margin-top: 20px;
@@ -32,10 +81,35 @@
     font-size: calc(16px + .5vw);
     line-height: 1.2;
     padding: 5px;
+    margin: 10px;
   }
   .notes {
-    background-color: #545554;
-    height: 600px
+/*    background-color: rgba(84, 85, 84, .8);*/
+/*    background-color: rgba(33, 38, 77, .5);*/
+/*    background-color: rgba(27, 37, 44, 0.9);*/
+    background-color: rgba(16, 83, 135, .9);
+  }
+  .skillCards:nth-child(5n + 1) .infoCard {
+    background-color: rgba(33, 38, 77, 0.9);
+  }
+  .skillCards:nth-child(5n + 2) .infoCard {
+    background-color: rgba(32, 99, 63, 0.9);
+  }
+  .skillCards:nth-child(5n + 3) .infoCard {
+    background-color: rgba(116, 27, 41, .9);
+  }
+  .skillCards:nth-child(5n + 4) .infoCard {
+    background-color: rgba(16, 83, 135, 0.9);
+/*    background-color: rgba(66, 119, 153, .9);*/
+  }
+  .skillCards:nth-child(5n) .infoCard {
+    background-color: rgba(34, 34, 34, 0.9);
+  }
+
+  .notes {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+/*    height: 600px*/
   }
 
   body {
@@ -48,9 +122,9 @@
 */
   }
   body, html {
-/*      height: 100%;*/
-/*      background-color: #243746;*/
-        background-color: rgb(32, 15, 71);
+/*        background-color: rgb(32, 15, 71);*/
+        background-color: rgb(31, 27, 40);
+/*        background-color: rgb(24, 12, 49);*/
 
       line-height: 1.8;
       box-sizing:border-box;
@@ -85,7 +159,14 @@
   height: 100%;
   background-color: rgba(0, 0, 0, .2);
 }
-
+.socMedia a {
+  color: #dddddd;
+  text-decoration: none;
+  opacity: .6;
+}
+.socMedia a:hover {
+  opacity: 1;
+}
 /*
 font-family: 'Permanent Marker', cursive;
 font-family: 'Rock Salt', cursive;
@@ -125,26 +206,19 @@ font-family: 'Julee', cursive;
     background-repeat: no-repeat;
     background-size: cover;
 }
-/* 1st image (Portfolio) */
+/* 1st image */
 .bgimg-1 {
-    background-attachment: fixed;  
-    background-position: center;
-    background-repeat: repeat;
-    background-size: contain;
-    background-image: url("../images/Fib.png");
-    margin-bottom: -32px;
+  background-attachment: fixed;
+  background-position: center 66px;
+  background-repeat: repeat;
+  background-size: auto calc(100vh - 66px);
+  background-image: url("../images/Fib.png");
+  height: 100vh;
 }
-/*
-.cover {
-  background-color: white;
-  opacity: .8;
-*/
-/*    background-size: cover;*/
-/*}*/
-/* 2nd image (Logo. Full height) */
+/* 2nd image */
 .bgimg-2 {
-    background-image: url('../images/pencils.jpg');
-/*    height: 100vh;*/
+  background-image: url('../images/pencils.jpg');
+  height: 100vh;
 }
 
 /* Third image (Contact) */
@@ -192,9 +266,17 @@ color: rgba(0,0,0,.9);
 }
 
 */
-.jumbotron .container {
-  margin-top: 30vh;
-  height: 100vh;
+/*
+.adjustTop {
+  margin-top:60px;
+  background-color: transparent;
+}
+*/
+
+
+.bgimg-1 .jumbotron {
+  padding-top: 40vh;
+/*  height: 100vh;*/
 }
 
 /*********************************************************
@@ -229,10 +311,13 @@ color: rgba(0,0,0,.9);
     width: 10%;
   }
   .jumbotron {
-    padding-left: 8%;
+/*    padding-left: 8%;*/
   }
   .jumbotron h1 {
     font-size: 2.5rem;
+  }
+  .jumbotron h2 {
+    font-size: 2.0rem;
   }
   .jumbotron h4 {
     font-size: 1.5rem;
@@ -246,7 +331,7 @@ color: rgba(0,0,0,.9);
 /*md screen*/
 @media (min-width: 768px) {
   .navbar, .navbar:hover {
-    background-color: rgba(0, 0, 0, .3);
+    background-color: rgba(0, 0, 0, .7);
   }
   .navbar .myMenu li, .navbar button {
     background-color: inherit;
@@ -263,6 +348,9 @@ color: rgba(0,0,0,.9);
   .jumbotron h1 {
     font-size: 2.8rem;
   }
+  .jumbotron h2 {
+    font-size: 2.5rem;
+  }
   .jumbotron h4 {
     font-size: 1.8rem;
   }  
@@ -271,10 +359,13 @@ color: rgba(0,0,0,.9);
 /*lg screen*/
 @media (min-width: 992px) {
   .myMenu li {
-    width: 10%;
+    width: 12%;
   }
   .jumbotron h1 {
     font-size: 3.8rem;
+  }
+  .jumbotron h2 {
+    font-size: 2.7rem;
   }
   .jumbotron h4 {
     font-size: 2.2rem;
