@@ -1,0 +1,172 @@
+/************** General ********************/
+body, html {
+  background-color: rgb(44, 39, 55);
+  background-image:  url("../images/Fib_small.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 150px;
+  height: 100vh;
+  box-sizing:border-box;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+body,h1,h2,h3,h4,h5,h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  color: #727272;
+}
+.myResume {
+  background:#fff9ed;
+  background-image:  url("../images/exclusive-paper.png");
+  border: 1px solid white;
+  margin:auto;
+  padding: .5in;
+  -webkit-box-shadow: 4px 4px 2px 0px rgba(250, 239, 182, 0.5);
+  -moz-box-shadow: 4px 4px 2px 0px rgba(250, 239, 182, 0.5);
+  box-shadow: 4px 4px 2px 0px rgba(250, 239, 182, 0.5);
+}
+
+/**************** Colors ********************/
+.contactInfo, .projTitle, .secTitle, .educNotes, .profDesc {
+  color:#000000;
+}
+
+/************************* Margins *************************/
+.resumeBg .container>div {
+  margin-top:10vh;
+}
+.educNotes {
+  margin-bottom: 3px;
+}
+ul, .education p:last-child {
+  margin-bottom: 8px;
+}
+.contributions {
+  margin-left: 20px;
+}
+
+.project {
+  margin-top: 0;
+}
+h3, .secTitle, .project {
+  margin-bottom: 0;
+}
+
+/****************** Font & Alignment **************/
+.secTitle {
+  font-weight: 800;
+}
+.projTitle {
+  font-style: italic;
+  font-weight: 400;
+}
+a {
+  font-weight: 400;
+}
+.myResume>h3, .myResume>p {
+  text-align: left;
+}
+body, .myResume>p, .myResume li {
+  line-height: 1.3;
+}
+.header p {
+  font-size: 105%;
+}
+
+/*************** Footer *******************/
+.resumeBottom .container {
+  margin: 10px auto;
+  text-align: center;
+}
+.resumeBottom .container a {
+  color: #fff9ed;
+  opacity: .7;
+  font-size: 2em;
+  margin: 0 15px;
+}
+.resumeBottom .container a:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+/***************** MEDIA ******************/
+
+/*
+ * These screen sizes are based on bootstrap.css version 4
+ * xs < 576px
+ * sm >= 576px
+ * md >= 768px
+ * lg >= 992 px
+ * xl >= 1200px
+ */
+
+/*xs screen*/
+@media (min-width: 0px) {
+  body {
+    font-size: 90%;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  .contactInfo span {
+    display: block;
+  }
+}
+
+/*lg screen*/
+@media (min-width: 992px) {
+  body {
+    font-size: 100%;
+  }
+  h3 {
+    font-size: 28px;
+  }
+  .contactInfo span {
+    float: right;
+  }
+  .myResume {
+    width: 8.5in;
+  }
+}
+
+/* for printing resume */
+@media print {
+    body {
+      font-size: 100%;
+    }
+    h3 {
+      font-size: 28px;
+    }
+    .contactInfo span {
+      float: right;
+    }
+
+    /* Need to override overflow:auto to make multiple pages print */
+    body {
+      overflow: visible; 
+    }
+    .myResume { 
+      overflow: visible; 
+      background-color: white;
+      color: rgba(0, 0, 0, .9);
+      background-image:  none;
+      border: none;
+      height: 11.0in;
+      margin:auto;
+      width: 8.5in;
+      padding: 0;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+  }
+  
+    body {
+      background-image: none;
+      background-color: transparent;
+    }
+    .resumeBottom {
+      display: none;
+    }
+}
+
+
