@@ -129,8 +129,7 @@
   .skillCards:nth-child(5n) .infoCard {
     background-color: rgba(34, 34, 34, 0.9);
   }
-
-  .notes {
+  .notes, .bgimg-3, .trans1 {
     padding-top: 10vh;
     padding-bottom: 10vh;
 /*    height: 600px*/
@@ -180,6 +179,11 @@
     font-family: 'Sedgwick Ave', cursive;
 /*    font-family: 'Kaushan Script', cursive;*/
   }
+/*
+.trans1 .jumbotron {
+  margin-top: 10vh;
+}
+*/
 .navbar-brand {
   font-size: 140%;
 }
@@ -250,6 +254,9 @@ font-family: 'Julee', cursive;
   background-size: auto calc(100vh - 66px);
   background-image: url("../images/Fib.png");
   height: 100vh;
+}
+.trans1 {
+  min-height: 100vh;
 }
 .bgimg-2 {
   background-attachment: fixed;
@@ -338,9 +345,11 @@ color: rgba(0,0,0,.9);
 
 /*xs screen*/
 @media (min-width: 0px) {
+/*
   .navbar {
     background-color: transparent;
   }
+*/
   .navbar .myMenu li, .navbar button {
     background-color: black;
   }
@@ -350,11 +359,9 @@ color: rgba(0,0,0,.9);
   .navbar-brand {
     display: none;
   }
-/*
   .myMenu li {
     width: 12%;
   }
-*/
   .jumbotron {
 /*    padding-left: 8%;*/
   }
