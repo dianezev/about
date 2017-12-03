@@ -48,7 +48,6 @@
 .bottom .container a {
   color: white;
   opacity: .7;
-  font-size: 2em;
 }
 .bottom .container a:hover {
   opacity: 1;
@@ -140,11 +139,36 @@
   -moz-box-shadow: 4px 7px 10px 0px rgba(0,0,0,0.74);
   box-shadow: 4px 7px 10px 0px rgba(0,0,0,0.74);
 }
+.contactMe.bgimg-3 {
+  min-height: 100vh;
+  height: 100%;
+}
+.contactPic img {
+  background-color: rgb(31, 27, 40);
+  -webkit-box-shadow: 14px 14px 10px 0px rgba(0,0,0,0.74);
+  -moz-box-shadow: 14px 14px 10px 0px rgba(0,0,0,0.74);
+  box-shadow: 14px 14px 10px 0px rgba(0,0,0,0.74);
+}
 
 .projectList .infoCard img {
   max-width: 100%;
   max-height: 100%;
 }
+.projectList .infoCard p {
+  font-size: 14px;
+  text-align: left;
+  padding: 2px 10px;
+}
+.projectList .infoCard h6, .projectList .infoCard a {
+/*  font-size:20px;  */
+}
+.projectList .infoCard a {
+  color: #55d1f7;
+  font-weight: 600;
+  text-decoration: underline;
+  opacity: .6;
+}
+
   body {
 /*
     background: url("../img/wood3.jpg") no-repeat center center fixed; 
@@ -198,12 +222,27 @@
   height: 100%;
   background-color: rgba(0, 0, 0, .2);
 }
-.socMedia {
-  text-align: center;
+.homeContainer .socMedia, .contactText .socMedia {
   position: absolute;
+}
+.homeContainer .socMedia {
+  text-align: center;
   left:0;
   right:0;
   bottom: 20px;
+}
+.contactText .socMedia {
+  text-align: left;
+  bottom: 0;
+}
+.homeContainer, .contactText {
+  position: relative;
+}
+.homeContainer {
+  height: 100%;
+}
+.contactText {
+  height: 277px;
 }
 .socMedia a {
   color: #dddddd;
@@ -211,7 +250,7 @@
   opacity: .6;
   margin: 5px;
 }
-.socMedia a:hover {
+.socMedia a:hover, .projectList a:hover {
   opacity: 1;
 }
 /*
@@ -345,11 +384,24 @@ color: rgba(0,0,0,.9);
 
 /*xs screen*/
 @media (min-width: 0px) {
-/*
-  .navbar {
-    background-color: transparent;
+  .contactPic img{
+    display: block;
+    margin: auto;
   }
-*/
+  .contactText h4 {
+    margin-top: 20px;
+  }
+  .contactText h5 {
+    margin-bottom: 40px;
+  }
+  .contactText {
+    text-align: center;
+  
+  }
+  .contactText .socMedia {
+    text-align: center;
+    position: relative;
+  }
   .navbar .myMenu li, .navbar button {
     background-color: black;
   }
@@ -378,10 +430,29 @@ color: rgba(0,0,0,.9);
 
 /*sm screen*/
 @media (min-width: 576px) {
+  .bottom .container a {
+    color: white;
+    opacity: .7;
+    font-size: 2em;
+  }
 }
 
 /*md screen*/
 @media (min-width: 768px) {
+  .contactText h4 {
+    margin-top: 0;
+  }
+  .contactText {
+    text-align: left;  
+  }
+  .contactPic img{
+    float: right;
+  }
+  .contactText .socMedia {
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+  }
   .navbar, .navbar:hover {
     background-color: rgba(0, 0, 0, .8);
   }
