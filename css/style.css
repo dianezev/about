@@ -106,7 +106,7 @@
 /*    background-color: rgba(16, 83, 135, 1);*/
     background-color: rgb(222, 222, 222);
   }
-.notes h2, .notes p {
+.notes h2, .notes p, .mySkills h2 {
   color: black;
 }
 .notes .infoCard p, .notes .infoCard a {
@@ -128,7 +128,7 @@
   .skillCards:nth-child(5n) .infoCard {
     background-color: rgba(34, 34, 34, 0.9);
   }
-  .notes, .bgimg-3, .trans1 {
+  .notes, .trans3, .trans1, .trans2 {
     padding-top: 10vh;
     padding-bottom: 10vh;
 /*    height: 600px*/
@@ -163,8 +163,10 @@
 /*  font-size:20px;  */
 }
 .projectList .infoCard a {
-  color: #55d1f7;
   font-weight: 600;
+}
+.contactText a, .projectList .infoCard a {
+  color: #55d1f7;
   text-decoration: underline;
   opacity: .6;
 }
@@ -180,7 +182,13 @@
   }
   body, html {
 /*        background-color: rgb(32, 15, 71);*/
-        background-color: rgb(31, 27, 40);
+/*        background-color: rgb(31, 27, 40);*/
+    
+/*    background-color: rgb(33, 38, 77);*/
+    background-color: rgb(253, 253, 253);
+
+    /*        background-color: rgb(32, 32, 103);*/
+/*        background-color: rgb(56, 56, 56);*/
 /*        background-color: rgb(24, 12, 49);*/
 
       line-height: 1.8;
@@ -211,12 +219,126 @@
 .navbar-brand {
   font-size: 140%;
 }
-.trans1 {
+.trans1, .trans3, .trans2 {
   width: 100%;
   height: 100%;
-/*  background-color: rgba(0, 0, 0, .5);*/
+  min-height: 100vh;
+}
+.trans2 {
   background-color: rgba(14, 18, 29, 0.5);
 }
+.trans3 {
+  background-color: rgba(17, 22, 44, 0.9);
+}
+
+.bgimg-1 {
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+/*samples for start pg*/
+/* fib */
+/*
+.bgimg-1 {
+  background-position: center 66px;
+  background-repeat: repeat;
+  background-size: auto calc(100vh - 66px);
+  background-image: url("../images/Fib.png");
+}
+.trans1 {
+  background-color: rgba(48, 56, 109, 0.9);
+}
+.homeContainer h1, h4 {
+  color:white;
+}
+*/
+
+/* lights */
+/*
+.bgimg-1 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../images/desk10.jpg");
+}
+.trans1 {
+  background-color: rgba(0, 0, 0, .4);
+}
+.homeContainer h1, h4 {
+  color:white;
+}
+*/
+
+/* leaf on wood */
+.bgimg-1 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../images/desk6.jpeg");
+}
+.trans1 {
+  background-color: rgba(101, 101, 101, .3);
+}
+.homeContainer h1, h4 {
+  color:white;
+}
+
+/* canada */
+/*
+.bgimg-1 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../images/IMG_0240.JPG");
+}
+.trans1 {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.homeContainer h1, h4 {
+  color:black;
+}
+*/
+
+/* pike place */
+/*
+.bgimg-1 {
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../images/desk11.jpeg");
+}
+.trans1 {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.homeContainer h1, h4 {
+  color:black;
+}
+*/
+
+/* seattle skyline */
+/*
+.bgimg-1 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../images/desk12.jpeg");
+}
+.trans1 {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.homeContainer h1, h4 {
+  color:black;
+}
+*/
+
+
+
+
+
+
+
+
+
 .trans2 {
   width: 100%;
   height: 100%;
@@ -229,7 +351,7 @@
   text-align: center;
   left:0;
   right:0;
-  bottom: 20px;
+  bottom: 0;
 }
 .contactText .socMedia {
   text-align: left;
@@ -250,7 +372,7 @@
   opacity: .6;
   margin: 5px;
 }
-.socMedia a:hover, .projectList a:hover {
+.socMedia a:hover, .projectList a:hover, .contactText a:hover {
   opacity: 1;
 }
 /*
@@ -286,17 +408,6 @@ font-family: 'Julee', cursive;
 
 /********************* Create a Parallax Effect *********************/
 
-.bgimg-1 {
-  background-attachment: fixed;
-  background-position: center 66px;
-  background-repeat: repeat;
-  background-size: auto calc(100vh - 66px);
-  background-image: url("../images/Fib.png");
-  height: 100vh;
-}
-.trans1 {
-  min-height: 100vh;
-}
 .bgimg-2 {
   background-attachment: fixed;
   background-position: center;
@@ -306,11 +417,12 @@ font-family: 'Julee', cursive;
 }
 .bgimg-3 {
   background-attachment: fixed;
-  background-position: center;
+  background-position: center 66px;
   background-repeat: repeat;
-/*  background-size: cover;*/
-  background-size: 150px;
-  background-image: url("../images/Fib_small.png");
+/*  background-size: 150px;*/
+  background-size: auto calc(100vh - 66px);
+/*  background-image: url("../images/Fib_small.png");*/
+  background-image: url("../images/Fib.png");
   height: 100vh;
 }
 
@@ -418,7 +530,7 @@ color: rgba(0,0,0,.9);
 /*    padding-left: 8%;*/
   }
   .jumbotron h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
   .jumbotron h2 {
     font-size: 2.0rem;
@@ -435,7 +547,12 @@ color: rgba(0,0,0,.9);
     opacity: .7;
     font-size: 2em;
   }
-}
+  .jumbotron h1 {
+    font-size: 3.0rem;
+  }
+  .jumbotron h2 {
+    font-size: 2.2rem;
+  }}
 
 /*md screen*/
 @media (min-width: 768px) {
@@ -470,7 +587,7 @@ color: rgba(0,0,0,.9);
     width: 14%;
   }
   .jumbotron h1 {
-    font-size: 2.8rem;
+    font-size: 3.3rem;
   }
   .jumbotron h2 {
     font-size: 2.5rem;
@@ -487,10 +604,10 @@ color: rgba(0,0,0,.9);
     width: 12%;
   }
   .jumbotron h1 {
-    font-size: 3.8rem;
+    font-size: 4.0rem;
   }
   .jumbotron h2 {
-    font-size: 2.7rem;
+    font-size: 3.0rem;
   }
   .jumbotron h4 {
     font-size: 2.2rem;
