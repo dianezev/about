@@ -413,7 +413,14 @@ ul.myMenu {
   }
   .jumbotron h2 {
     font-size: 2.2rem;
-  }}
+  }
+  .bgimg-1 {
+    background-image: url("../images/IMG_0240Small.JPG");
+  }
+  .bgimg-2 {
+    background-image: url('../images/pencils.jpg');
+  }
+}
 
 /*md screen*/
 @media (min-width: 768px) {
@@ -458,12 +465,6 @@ ul.myMenu {
   }
   .jumbotron h4 {
     font-size: 1.8rem;
-  }
-  .bgimg-1 {
-    background-image: url("../images/IMG_0240Small.JPG");
-  }
-  .bgimg-2 {
-    background-image: url('../images/pencils.jpg');
   }
 }
 
