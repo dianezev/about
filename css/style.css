@@ -378,10 +378,12 @@ ul.myMenu {
     font-size: 1.5rem;
   }
   .bgimg-1 {
-    background-image: url("../images/IMG_0240Phone.jpg");
+    background-image: url("../images/Fib.png");
+    background-color: rgba(15, 19, 50, 0.9);
   }
+  
   .bgimg-2 {
-    background-image: url('../images/pencilsPhone.jpg');
+    background-color: white;
   }
 
 }
