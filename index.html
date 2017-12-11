@@ -1,37 +1,25 @@
 <!DOCTYPE html>
 <html>
-
   
 <head>
   <title>Diane Zevenbergen</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  
-  
-  
-<!--  <link href="https://fonts.googleapis.com/css?family=Poppins:300" rel="stylesheet">-->
-<!--  <link href="https://fonts.googleapis.com/css?family=Boogaloo|Bubblegum+Sans|Caveat+Brush|Encode+Sans+Semi+Expanded:300,400,800|Fredericka+the+Great|Julius+Sans+One|Kaushan+Script|Mouse+Memoirs|Short+Stack|Wendy+One" rel="stylesheet">-->
-<!--
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,600i|Questrial|Quicksand:400,500" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Aladin|Julee|Over+the+Rainbow|Permanent+Marker|Rock+Salt|Sedgwick+Ave" rel="stylesheet">
--->
-  
-  
-  
-  
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,600i|Sedgwick+Ave" rel="stylesheet">
-  
-  
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">  
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
   
 <body id="main">
-
-<!--  Collapsing navbar, uses Bootstrap V4-->
+  <div class="loader">
+    <div class="center">
+      <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+  
+  <div id="portfolio" class="hide">
   <nav class="navbar navbar-expand-md navbar-dark fixed-top">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -83,8 +71,7 @@
     <div class="container">
       <div class="jumbotron">
         <h2>About</h2>
-        <p> more stuff here...</p>
-        <p> resume link, links to work or just linkedin and github</p>
+        <div id="includeAboutContent"></div>
         <a target="_blank" href="resume.html">View resume</a>
       </div>
     </div>
@@ -204,13 +191,8 @@
       </div>
     </div>
   </div>
-
   
-  
-  
-  
-  
-  <div class="notes" id="projects">
+  <div class="projNotes" id="projects">
     <div class="container">
       <div class="jumbotron">
         <h2>Projects</h2>
@@ -223,8 +205,8 @@
               <div class="fitImage">
                 <img src="images/budget.png" alt="Picture of budget app..." />
               </div>
-              <h5>Budget Management Tool</h5>
-              <p>Team project uses JavaScript, PHP, MySQL, jQuery, D3, Bootstrap and Underscore. Demo
+              <h5>Budget Tool</h5>
+              <p><span>Team project uses JavaScript, PHP, MySQL, jQuery, D3, Bootstrap and Underscore. </span>Demo
                 <a target="_blank" href="http://budgetlc.herokuapp.com">here
                 </a>and view code on
                 <a target="_blank"  href="https://github.com/dianezev/budgetLC">GitHub.
@@ -240,7 +222,7 @@
                 <img src="images/mathfacts.png" alt="Picture of math facts app..." />
               </div>
               <h5>Math Facts</h5>
-              <p>Independent project uses JavaScript, jQuery, Underscore, Bootstrap, CSS3 and HTML. Demo
+              <p><span>Independent project uses JavaScript, jQuery, Underscore, Bootstrap, CSS3 and HTML. </span>Demo
                 <a target="_blank" href="http://www.fastermathfacts.org">here
                 </a>and view code on
                 <a target="_blank"  href="https://github.com/dianezev/mathfacts">GitHub.
@@ -256,7 +238,7 @@
                 <img src="images/flashcards.png" alt="Picture of flashcards app..." />
               </div>
               <h5>Flashcards</h5>
-              <p>Team project uses Angular 4, TypeScript, Bootstrap, MongoDB, Node.js and Express. View code on
+              <p><span>Team project uses Angular 4, TypeScript, Bootstrap, MongoDB, Node.js and Express. </span>View code on
                 <a target="_blank"  href="https://github.com/dianezev/flashcards">GitHub.
                 </a>
               </p>
@@ -270,8 +252,8 @@
                 <img src="images/matchFour.png" alt="Picture of logic app..." />
               </div>
               <h5>Logic Game</h5>
-              <p>Team project uses JavaScript, Java, jQuery, Bootstrap and Spring Boot. Demo
-                <a target="_blank" href="http://budgetlc.herokuapp.com">here
+              <p><span>Team project uses JavaScript, Java, jQuery, Bootstrap and Spring Boot. </span>Demo
+                <a target="_blank" href="http://fastermathfacts.org/matchfour/">here
                 </a>and view code on
                 <a target="_blank"  href="https://github.com/jharkreader/match-four">GitHub.
                 </a>
@@ -303,7 +285,8 @@
               <h4>Diane Zevenbergen</h4>
               <h5>Seattle, Washington<br>
               Email: dianezev@gmail.com<br>
-                LinkedIn: <a target="_blank" href="https://www.linkedin.com/in/dianezev">www.linkedin.com/in/dianezev</a></h5>
+                LinkedIn: <a target="_blank" href="https://www.linkedin.com/in/dianezev">www.linkedin.com/in/dianezev</a><br>
+                GitHub: <a target="_blank" href="https://github.com/dianezev">https://github.com/dianezev</a></h5>
               <div class="socMedia">
                 <a target="_blank"  href="https://github.com/dianezev">
                   <i class="fa fa-github fa-3x"></i>
@@ -326,38 +309,15 @@
       </div>
     </div>
   </div>
-
+</div>
   
-<!--
-  <div class="bgimg-3" id="contact">
-    <div class="trans2">
--->
-<!--    <div class="trans2" style="background-color: white;">-->
-<!--      <div style="width: 400px; height:400px; background-color: red"></div>-->
-<!--
-    <div class="jumbotron">
-      <div class="container">
-        <h2>Contact</h2>
-      </div>
-    </div>
--->
-
-  
-<!--
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
--->
-<!--
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>  
--->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-  
-<!--<script src="js/script.js"></script>-->
-
+<script src="js/script.js"></script>
   
 </body>
 </html>
