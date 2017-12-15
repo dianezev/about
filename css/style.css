@@ -377,6 +377,12 @@ ul.myMenu {
   .trans1 {
     background-color: rgba(15, 19, 50, 0.9);
   }
+  .bgimg-2 .jumbotron, .contactMe.bgimg-3 .jumbotron, .projNotes .jumbotron {
+    padding-bottom: 0;
+  }
+  .bgimg-2 .jumbotron, .projNotes .jumbotron {
+    margin-bottom: 0;
+  }
 }
 
 /*sm screen*/
@@ -469,6 +475,28 @@ ul.myMenu {
   .bgimg-2 {
     background-image: url('../images/pencils.jpg');
   }
+/*  Revise bg colors on larger screen to make it have a more random look*/
+  .skillCards:nth-child(5) .infoCard {
+    background-color: rgba(116, 27, 41, .9);
+  }
+  .skillCards:nth-child(6) .infoCard {
+    background-color: rgba(34, 34, 34, 0.9);
+  }
+  .skillCards:nth-child(7) .infoCard {
+    background-color: rgba(16, 83, 135, 0.9);
+  }
+  .skillCards:nth-child(8) .infoCard {
+    background-color: rgba(32, 99, 63, 0.9);
+  }
+  .skillCards:nth-child(9) .infoCard {
+    background-color: rgba(34, 34, 34, 0.9);
+  }
+  .skillCards:nth-child(10) .infoCard {
+    background-color: rgba(32, 99, 63, 0.9);
+  }
+  .skillCards:nth-child(11) .infoCard {*/
+    background-color: rgba(33, 38, 77, 0.9);
+  }
 }
 
 /*lg screen*/
@@ -488,11 +516,45 @@ ul.myMenu {
   }
   .jumbotron h4 {
     font-size: 2.2rem;
-  }  
+  }
 }
 
 /*xl screen*/
 @media (min-width: 1200px) {
-
+/*  Revise bg colors on larger screen to make it have a more random look*/
+  .skillCards:nth-child(5) .infoCard {
+    background-color: rgba(34, 34, 34, 0.9);
+  }
+  .skillCards:nth-child(6) .infoCard {
+    background-color: rgba(16, 83, 135, 0.9);
+  }
+  .skillCards:nth-child(7) .infoCard {
+    background-color: rgba(116, 27, 41, .9);
+  }
+  .skillCards:nth-child(8) .infoCard {
+    background-color: rgba(34, 34, 34, 0.9);
+  }
+  .skillCards:nth-child(9) .infoCard {
+    background-color: rgba(16, 83, 135, 0.9);
+  }
+  .skillCards:nth-child(10) .infoCard {
+    background-color: rgba(33, 38, 77, 0.9);
+  }
+  .skillCards:nth-child(11) .infoCard {
+    background-color: rgba(32, 99, 63, 0.9);
+  }
+  .bgimg-2 .jumbotron, .contactMe.bgimg-3 .jumbotron, .projNotes .jumbotron {
+    padding-bottom: 2rem;
+  }
 }
 
+/*xxl screen*/
+@media (min-width: 1600px) {
+  .bgimg-2 .jumbotron, .contactMe.bgimg-3 .jumbotron, .projNotes .jumbotron {
+    padding-bottom: 4rem;
+  }
+  .bgimg-2 .jumbotron, .projNotes .jumbotron {
+    margin-bottom: 2rem;
+  }
+
+}
