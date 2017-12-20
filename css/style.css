@@ -388,8 +388,6 @@ ul.myMenu {
 /*sm screen*/
 @media (min-width: 576px) {
   .bottom .container a {
-    color: white;
-    opacity: .7;
     font-size: 2em;
   }
   .contactText h4 {
@@ -412,19 +410,19 @@ ul.myMenu {
     font-size: 2.2rem;
   }
   .bgimg-1 {
-    background-image: url("../images/IMG_0240Small.JPG");
-  }
-  .bgimg-1 {
+    background-image: url("../images/CanadaPhone.jpg");
+    /*    using back color here because on some smaller devices image is not loading*/
+    background-color: rgba(15, 19, 50, 0.9);
     background-attachment: fixed;
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
   }
   .trans1 {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0);
   }
   .bgimg-2 {
-    background-image: url('../images/pencilsPhone.png');
+    background-image: url('../images/pencilsPhone2.jpg');
   }
 }
 
@@ -471,6 +469,9 @@ ul.myMenu {
   }
   .jumbotron h4 {
     font-size: 1.8rem;
+  }
+  .bgimg-1 {
+    background-image: url("../images/IMG_0240Small.JPG");
   }
   .bgimg-2 {
     background-image: url('../images/pencils.jpg');
