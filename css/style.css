@@ -10,6 +10,31 @@
  * 8. Media
  **********************************************/
 
+/**************************************
+ * COLORS
+ **************************************/
+/*Use color variables for paint palette*/
+:root {
+/*  black*/
+/*  --colorA: rgba(34, 34, 34, 0.9); */
+  --colorA: rgba(34, 34, 34, 0.9);
+  
+/* aqua */
+  --colorB: rgba(16, 83, 135, 0.9);
+/*  --colorB: rgba(48, 122, 155, 0.9);*/
+  
+/* orange/red */
+  --colorC: rgba(173, 81, 46, 0.9);
+  --colorC: rgba(167, 46, 46, 0.9);
+  
+/* green */
+/*  --colorD: rgba(32, 99, 63, 0.9); */
+  --colorD: rgba(37, 128, 79, 0.9);
+  
+/* blue */
+/*  --colorE: rgba(33, 38, 77, 0.9); */
+  --colorE: rgba(57, 41, 100, 0.9);  
+}
 
 
 /*************************************************************
@@ -193,28 +218,23 @@ ul.myMenu {
   padding: 5px!important;
 }
 .skillCards:nth-child(5n + 1) .infoCard {
-  background-color: rgba(33, 38, 77, 0.9);
+  background-color: var(--colorE);
 }
 .skillCards:nth-child(5n + 2) .infoCard {
-  background-color: rgba(32, 99, 63, 0.9);
+  background-color: var(--colorD);
 }
 .skillCards:nth-child(5n + 3) .infoCard {
-  background-color: rgba(116, 27, 41, .9);
+/*  background-color: rgba(116, 27, 41, .9);*/
+  background-color: var(--colorC);
 }
 .skillCards:nth-child(5n + 4) .infoCard {
-  background-color: rgba(16, 83, 135, 0.9);
+  background-color: var(--colorB);
 }
 .skillCards:nth-child(5n) .infoCard {
-  background-color: rgba(34, 34, 34, 0.9);
-}
-.bgimg-2 {
-  background-attachment: fixed;
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: var(--colorA);
 }
 .trans2 {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.65);
 }
 
 /*************************************************************
@@ -240,8 +260,14 @@ ul.myMenu {
   -moz-box-shadow: 4px 7px 10px 0px rgba(0,0,0,0.74);
   box-shadow: 4px 7px 10px 0px rgba(0,0,0,0.74);
 }
-.projNotes h2, .projNotes p, .mySkills h2 {
+.projNotes {
+  min-height: 100vh;
+}
+.projNotes h2, .projNotes p {
   color: black;
+}
+.mySkills h2 {
+  color: white;
 }
 
 /*************************************************************
@@ -353,9 +379,6 @@ ul.myMenu {
   .projectList .infoCard p{
     font-size: .65em;
   }  
-  .jumbotron {
-/*    padding-left: 8%;*/
-  }
   .jumbotron h1 {
     font-size: 2.8rem;
   }
@@ -365,23 +388,35 @@ ul.myMenu {
   .jumbotron h4 {
     font-size: 1.5rem;
   }
-/*   too many issues getting photo to work with size cover on iPhone, so just use same thing as contact section*/
   .bgimg-1 {
-    background-attachment: fixed;
-    background-position: center 66px;
-    background-repeat: repeat;
-    background-size: auto calc(100vh - 66px);
-    background-image: url("../images/Fib.png");
+    background-image: url("../images/IMG_0240Small.JPG");
+    /*    using back color here because on some smaller devices image is not loading*/
+    background-color: rgba(15, 19, 50, 0.9);
+    background-attachment: scroll;
+    background-position: center bottom;
+    background-repeat: no-repeat;
     height: 100vh;
   }
   .trans1 {
-    background-color: rgba(15, 19, 50, 0.9);
+    background-color: rgba(0, 0, 0, 0);
   }
   .bgimg-2 .jumbotron, .contactMe.bgimg-3 .jumbotron, .projNotes .jumbotron {
     padding-bottom: 0;
   }
   .bgimg-2 .jumbotron, .projNotes .jumbotron {
     margin-bottom: 0;
+  }
+  .bgimg-2 {
+    background-attachment: scroll;
+    background-image: url('../images/pencils7b.jpeg');
+        
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+/*
+    min-height: 100vh;
+    height: 100%;
+*/
   }
 }
 
@@ -408,21 +443,6 @@ ul.myMenu {
   }
   .jumbotron h2 {
     font-size: 2.2rem;
-  }
-  .bgimg-1 {
-    background-image: url("../images/CanadaPhone.jpg");
-    /*    using back color here because on some smaller devices image is not loading*/
-    background-color: rgba(15, 19, 50, 0.9);
-    background-attachment: fixed;
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .trans1 {
-    background-color: rgba(0, 0, 0, 0);
-  }
-  .bgimg-2 {
-    background-image: url('../images/pencilsPhone2.jpg');
   }
 }
 
@@ -470,34 +490,39 @@ ul.myMenu {
   .jumbotron h4 {
     font-size: 1.8rem;
   }
+/*
   .bgimg-1 {
     background-image: url("../images/IMG_0240Small.JPG");
   }
-  .bgimg-2 {
-    background-image: url('../images/pencils.jpg');
-  }
+*/
 /*  Revise bg colors on larger screen to make it have a more random look*/
   .skillCards:nth-child(5) .infoCard {
-    background-color: rgba(116, 27, 41, .9);
+    /*  background-color: rgba(116, 27, 41, .9);*/
+    background-color: var(--colorC);
   }
   .skillCards:nth-child(6) .infoCard {
-    background-color: rgba(34, 34, 34, 0.9);
+    background-color: var(--colorA);
   }
   .skillCards:nth-child(7) .infoCard {
-    background-color: rgba(16, 83, 135, 0.9);
+    background-color: var(--colorB);
   }
   .skillCards:nth-child(8) .infoCard {
-    background-color: rgba(32, 99, 63, 0.9);
+    background-color: var(--colorD);
   }
   .skillCards:nth-child(9) .infoCard {
-    background-color: rgba(34, 34, 34, 0.9);
+    background-color: var(--colorA);
   }
   .skillCards:nth-child(10) .infoCard {
-    background-color: rgba(32, 99, 63, 0.9);
+    background-color: var(--colorD);
   }
   .skillCards:nth-child(11) .infoCard {*/
-    background-color: rgba(33, 38, 77, 0.9);
+    background-color: var(--colorE);
   }
+/*
+  .bgimg-1 {
+    background-image: url("../images/IMG_0240Small.JPG");
+  }
+*/
 }
 
 /*lg screen*/
@@ -518,31 +543,43 @@ ul.myMenu {
   .jumbotron h4 {
     font-size: 2.2rem;
   }
+  
+/*  TBD: try fixed up at xl size, due to issue with ipad*/
+  .bgimg-1 {
+/*    background-image: url("../images/IMG_0240Small.JPG");*/
+    background-attachment: fixed;
+  }
+
+  .bgimg-2 {
+    background-attachment: fixed;
+    background-image: url('../images/pencils8b.jpeg');
+  }
 }
 
 /*xl screen*/
 @media (min-width: 1200px) {
 /*  Revise bg colors on larger screen to make it have a more random look*/
   .skillCards:nth-child(5) .infoCard {
-    background-color: rgba(34, 34, 34, 0.9);
+    background-color: var(--colorA);
   }
   .skillCards:nth-child(6) .infoCard {
-    background-color: rgba(16, 83, 135, 0.9);
+    background-color: var(--colorB);
   }
   .skillCards:nth-child(7) .infoCard {
-    background-color: rgba(116, 27, 41, .9);
+  /*  background-color: rgba(116, 27, 41, .9);*/
+    background-color: var(--colorC);
   }
   .skillCards:nth-child(8) .infoCard {
-    background-color: rgba(34, 34, 34, 0.9);
+    background-color: var(--colorA);
   }
   .skillCards:nth-child(9) .infoCard {
-    background-color: rgba(16, 83, 135, 0.9);
+    background-color: var(--colorB);
   }
   .skillCards:nth-child(10) .infoCard {
-    background-color: rgba(33, 38, 77, 0.9);
+    background-color: var(--colorE);
   }
   .skillCards:nth-child(11) .infoCard {
-    background-color: rgba(32, 99, 63, 0.9);
+    background-color: var(--colorD);
   }
   .bgimg-2 .jumbotron, .contactMe.bgimg-3 .jumbotron, .projNotes .jumbotron {
     padding-bottom: 2rem;
@@ -558,4 +595,10 @@ ul.myMenu {
     margin-bottom: 2rem;
   }
 
+}
+/*only use cover for largest screens due to issues with tablet display*/
+@media (min-width: 1800px) {
+  .bgimg-1, .bgimg-2 {
+    background-size: cover;
+  }
 }
