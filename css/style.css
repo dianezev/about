@@ -335,6 +335,11 @@ ul.myMenu {
  * xl >= 1200px
  */
 
+/*
+ * For background images, use breakpoint in cm because iPads 
+ * ignore background images that are fixed AND covered, which
+ * I want on desktops for parallax effect.
+ */
 
 /*xs screen*/
 @media (min-width: 0px) {
@@ -490,14 +495,8 @@ ul.myMenu {
   .jumbotron h4 {
     font-size: 1.8rem;
   }
-/*
-  .bgimg-1 {
-    background-image: url("../images/IMG_0240Small.JPG");
-  }
-*/
 /*  Revise bg colors on larger screen to make it have a more random look*/
   .skillCards:nth-child(5) .infoCard {
-    /*  background-color: rgba(116, 27, 41, .9);*/
     background-color: var(--colorC);
   }
   .skillCards:nth-child(6) .infoCard {
@@ -518,11 +517,6 @@ ul.myMenu {
   .skillCards:nth-child(11) .infoCard {*/
     background-color: var(--colorE);
   }
-/*
-  .bgimg-1 {
-    background-image: url("../images/IMG_0240Small.JPG");
-  }
-*/
 }
 
 /*lg screen*/
@@ -544,9 +538,8 @@ ul.myMenu {
     font-size: 2.2rem;
   }
   
-/*  TBD: try fixed up at xl size, due to issue with ipad*/
+/*
   .bgimg-1 {
-/*    background-image: url("../images/IMG_0240Small.JPG");*/
     background-attachment: fixed;
   }
 
@@ -554,6 +547,7 @@ ul.myMenu {
     background-attachment: fixed;
     background-image: url('../images/pencils8b.jpeg');
   }
+*/
 }
 
 /*xl screen*/
@@ -586,8 +580,12 @@ ul.myMenu {
   }
 }
 
-/*xxl screen*/
-@media (min-width: 1600px) {
+/* 
+ * xxl screen
+ * Primarily using this to add parallax to largest screens.
+ * Not using for smaller screens due to issue with display on iPads, which go to 1300+ pixels
+ */
+@media (min-width: 1436px) {
   .bgimg-2 .jumbotron, .contactMe.bgimg-3 .jumbotron, .projNotes .jumbotron {
     padding-bottom: 4rem;
   }
@@ -595,10 +593,15 @@ ul.myMenu {
     margin-bottom: 2rem;
   }
 
-}
-/*only use cover for largest screens due to issues with tablet display*/
-@media (min-width: 1800px) {
+  /*only use cover for largest screens due to issues with tablet display*/
   .bgimg-1, .bgimg-2 {
     background-size: cover;
+  }
+  .bgimg-1 {
+    background-attachment: fixed;
+  }
+  .bgimg-2 {
+    background-attachment: fixed;
+    background-image: url('../images/pencils8b.jpeg');
   }
 }
