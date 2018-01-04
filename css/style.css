@@ -343,6 +343,11 @@ ul.myMenu {
 
 /*xs screen*/
 @media (min-width: 0px) {
+  .infoCard h5 {
+    font-size: 15px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
   .contactPic img{
     display: block;
     margin: auto;
@@ -427,6 +432,9 @@ ul.myMenu {
 
 /*sm screen*/
 @media (min-width: 576px) {
+  .infoCard h5 {
+    font-size: 20px;
+  }
   .bottom .container a {
     font-size: 2em;
   }
